@@ -150,6 +150,19 @@ header, .main{ position: relative; z-index: 1; }
     .ufo{ animation: none; }
 }
 
+/* Mobile tweaks for small screens */
+@media (max-width: 480px){
+    .intro{ font-size: 40px; }
+    .title-icon-img, .heading-icon{ width: 28px; height: 28px; }
+    .stats{ line-height: 1.1; }
+    .ufo{ opacity: 0.4; }
+}
+
+@media (max-width: 360px){
+    .intro{ font-size: 32px; }
+    .ufo{ display: none; }
+}
+
 /* Generic page content wrapper for inner pages */
 .content{
     max-width: 900px;
