@@ -1,0 +1,275 @@
+/*This is from the google fonts */
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    background-color: #FFE6DE;
+    
+}
+
+
+/*this is the parent div for all other*/
+.main{
+    max-width: 1000px;
+    padding: 20px;
+    margin: 20px auto;           /* centers the container */  /* reduced from 40px auto */
+    display: flex;               /* centers content inside */
+    flex-direction: column;      /* stack children vertically (common layout) */
+    align-items: center;         /* horizontal centering */
+    justify-content: center;     /* vertical centering (remove if not needed) */
+    text-align: center;          /* centers inline text */
+}
+
+.icon{
+    width: 40%;
+    margin: 10px;
+    border-radius: 10%;
+    
+}
+.icon img{
+    width: 100%;
+
+}
+
+
+.intro_box{
+    text-align: center;
+    width: 70%; 
+    margin: 10px;
+    padding: 5px;
+    
+}
+
+.intro{
+    width: 80%;
+    padding: 5px; 
+    display:inline-block;
+    margin: 10px 10px 5px 10px; /* reduced bottom margin */
+    font-size: 80px;
+    font-family: "Jersey 10", sans-serif;
+}
+
+/* added: make the four boxes lay out in a responsive grid with gaps */
+.boxes-grid{
+    display: grid;                                              /* grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));/* responsive columns */
+    gap: 16px;                                                  /* space between boxes */
+    width: 100%;
+}
+
+
+
+/* updated: unified box styles (spacing, rounding, centering, font) */
+.box1, .box2, .box3, .box4{
+    background-color: white;
+    border-radius: 12px;                /* rounded corners */
+    padding: 16px;                      /* inner spacing */
+    text-align: center;                 /* center text */
+    font-family: "Jersey 10", sans-serif; /* use the same font as parent */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* subtle shadow */
+    /* removed: margin so .boxes-grid gap controls spacing */
+    position: relative;
+    overflow: visible;
+    /* added new features to make the boxes more square shaped */
+    min-height: 100px;                  /* added: minimum height for square-ish shape */
+    display: flex;                      /* added: flex for better content centering */
+    align-items: center;                /* added: vertical centering */
+    justify-content: center;            /* added: horizontal centering */
+    font-size: 40px;                    /* added: increase the font size inside boxes */
+    cursor: pointer;                    /* added: pointer for cursor */
+    text-decoration: none;              /* added: if wrapped with <a>, keep it clean */
+    color: black;
+}
+/* for all links */
+a:hover{
+    color: #f53cc7;
+}
+.box-title{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    font: inherit;
+}
+
+/* removed overlay link styles; using anchors directly for boxes */
+
+/* UFO decorations using your transparent PNGs */
+.ufo{
+    position: fixed;                 /* stays while scrolling */
+    z-index: 0;                      /* behind main content */
+    opacity: 0.7;                   /* subtle */
+    pointer-events: none;            /* ignore clicks */
+    animation: ufo-float 12s ease-in-out infinite;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
+    pointer-events: none;
+}
+.ufo img{
+    display: block;
+    width: clamp(140px, 20vw, 300px); /* responsive UFO size */
+    height: auto;
+}
+
+/* Example positions; tweak to taste */
+.ufo--left{ top: 2vh; left: 25vw; animation-delay: -2s; }
+.ufo--right{ top: 18vh; right: 8vw; animation-duration: 15s; }
+/*  I can tweak the positions of the items */
+
+/* Additional UFOs scattered around */
+.ufo--top-left{ top: 8vh; left: 12vw; animation-delay: -4s; animation-duration: 18s; }
+.ufo--top-right{ top: 15vh; right: 15vw; animation-delay: -1s; animation-duration: 14s; }
+.ufo--center-left{ top: 35vh; left: 4vw; animation-delay: -6s; animation-duration: 16s; }
+.ufo--center-top{ top: 10vh; left: 40vw; animation-delay: -6s; animation-duration: 16s; }
+.ufo--center-right{ top: 17vh; right: 18vw; animation-delay: -3s; animation-duration: 20s; }
+.ufo--bottom-left{ top: 75vh; left: 8vw; animation-delay: -5s; animation-duration: 13s; }
+.ufo--bottom-right{ top: 50vh; right: 6vw; animation-delay: -7s; animation-duration: 17s; }
+.ufo--middle{ top: 30vh; left: 40vw; transform: translateX(-50%); animation-delay: -8s; animation-duration: 19s; }
+.ufo--top-center{ top: 5vh; left: 50vw; transform: translateX(-50%); animation-delay: -9s; animation-duration: 21s; }
+.ufo--bottom-center{ top: 75vh; left: 40vw; transform: translateX(-50%); animation-delay: -10s; animation-duration: 22s; }
+
+
+
+
+/* Gentle float animation */
+@keyframes ufo-float{
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    25%  { transform: translate(8px, -8px) rotate(-2deg); }
+    50%  { transform: translate(14px, 0) rotate(1deg); }
+    75%  { transform: translate(8px, 8px) rotate(2deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Keep your content above the UFOs */
+header, .main{ position: relative; z-index: 1; }
+
+/* Accessibility: reduce motion if user prefers */
+@media (prefers-reduced-motion: reduce){
+    .ufo{ animation: none; }
+}
+
+/* Generic page content wrapper for inner pages */
+.content{
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 27px;
+    text-decoration: none;
+}
+.content a:hover{
+    color:#f53cc7;
+}
+.content a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Preserve line breaks and spaces in the stats block */
+.stats{
+    white-space: pre-wrap; /* keep your newlines; wrap long lines */
+    display: block;        /* ensure it behaves like a block element */
+    position: relative;    /* allow corner UFOs to anchor to this box */
+    font-family: "Jersey 10", sans-serif;
+    background: #111316;           /* dark console background */
+    color: #ffffff;                /* light text */
+    border: 1px solid #2a2f36;     /* subtle frame */
+    border-radius: 10px;           /* rounded corners to match your style */
+    padding: 10px 12px;            /* inner spacing */
+    line-height: 0.6;              /* comfy line height */
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.03), 0 6px 16px rgba(0,0,0,0.15);
+    overflow: auto;                /* scroll if content is too wide */
+    font-size: clamp(16px, 2.2vw, 36px);
+    margin:10px;
+    max-height: 60vh;              /* make all consoles scroll when tall */
+}
+
+/* Console-style headings and color utilities inside stats */
+.stats .heading{
+    display: block;
+    margin: 2px 0 2px; /* tighter gap above items */
+    font-weight: 700;
+    font-size: 1.25em; /* slightly larger than base */
+    letter-spacing: 0.02em;
+    font-family: inherit;
+    line-height: 1; /* reduce extra height from larger heading size */
+}
+.stats .subheading{ font-weight: 600; }
+.stats .label{ color: #9ca3af; }
+
+/* Color utilities */
+.stats .color-green{ color: #22c55e; }
+.stats .color-cyan{ color: #22d3ee; }
+.stats .color-yellow{ color: #eab308; }
+.stats .color-magenta{ color: #d946ef; }
+.stats .color-red{ color: #ef4444; }
+.stats .color-blue{ color: #60a5fa; }
+.stats .muted{ color: #9ca3af; }
+.stats .color-orange{ color: #d7f916; }
+
+/* About page title with inline icon */
+.page-title{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.title-icon-img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Small heading icons for inner pages */
+.heading-icon{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+/* Position special UFOs on box corners
+.ufo--box1{ top: -20px; right: -15px; animation-delay: -1s; }
+.ufo--box2{ top: -20px; left: -10px; animation-delay: -3s; }
+.ufo--box3{ top: -20px; right: -12px; animation-delay: -2s; }
+.ufo--box4{ top: -20px; left: -8px; animation-delay: -4s; } */
+
+/* Corner decorations for console boxes */
+.stats .ufo-corner{
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+}
+.stats .ufo-corner img{
+    width: clamp(70px, 6vw, 80px);
+    height: auto;
+}
+.stats .ufo-top-right{ top: 20px; right: 20px; }
+.stats .ufo-top-left{ top: 20px; left: 20px; }
+/* project-specific override no longer needed; using global alignment and height */
+.stats .ufo-bottom-right{ bottom: -16px; right: -12px; }
+.stats .ufo-top-left-pixibit{ top: 25px; left: 90px; }
+
+
+
+/* Bring specific UFOs to the front */
+.ufo--front{
+    z-index: 5;                      /* above main content (z-index: 1) */
+    opacity: 1;                    /* slightly more visible */
+}
+/* Special UFOs that appear on top of boxes */
+.ufo--box-decoration{
+    position: absolute;           /* positioned relative to nearest positioned parent */
+    z-index: 10;                 /* above the boxes (which have z-index: 1) */
+    opacity: 0.8;                /* more visible since they're decorative */
+    pointer-events: none;
+    animation: none;             /* make box UFOs static */
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.ufo--box-decoration img{
+    width: clamp(100px, 14vw, 120px); /* smaller than background UFOs */
+    height: auto;
+}
