@@ -27,6 +27,7 @@ body{
     width: 40%;
     margin: 10px;
     border-radius: 10%;
+    position: relative;
     
 }
 .icon img{
@@ -120,7 +121,7 @@ a:hover{
 /*  I can tweak the positions of the items */
 
 /* Additional UFOs scattered around */
-.ufo--top-left{ top: 8vh; left: 12vw; animation-delay: -4s; animation-duration: 18s; }
+/* .ufo--top-left{ top: 8vh; left: 12vw; animation-delay: -4s; animation-duration: 18s; }
 .ufo--top-right{ top: 15vh; right: 15vw; animation-delay: -1s; animation-duration: 14s; }
 .ufo--center-left{ top: 35vh; left: 4vw; animation-delay: -6s; animation-duration: 16s; }
 .ufo--center-top{ top: 10vh; left: 40vw; animation-delay: -6s; animation-duration: 16s; }
@@ -128,9 +129,19 @@ a:hover{
 .ufo--bottom-left{ top: 75vh; left: 8vw; animation-delay: -5s; animation-duration: 13s; }
 .ufo--bottom-right{ top: 50vh; right: 6vw; animation-delay: -7s; animation-duration: 17s; }
 .ufo--top-center{ top: 5vh; left: 50vw; transform: translateX(-50%); animation-delay: -9s; animation-duration: 21s; }
-.ufo--bottom-center{ top: 75vh; left: 40vw; transform: translateX(-50%); animation-delay: -10s; animation-duration: 22s; }
-*/
+.ufo--bottom-center{ top: 75vh; left: 40vw; transform: translateX(-50%); animation-delay: -10s; animation-duration: 22s; } */
+
 .ufo--middle{ top: 30vh; left: 40vw; transform: translateX(-50%); animation-delay: -8s; animation-duration: 19s; }
+/* Reposition middle UFO under headshot when nested inside .icon */
+.icon .ufo--middle{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 8px);
+}
+.icon .ufo--middle img{
+    width: clamp(80px, 14vw, 160px);
+}
 
 
 
