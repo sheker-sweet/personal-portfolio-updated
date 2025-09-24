@@ -27,7 +27,6 @@ body{
     width: 40%;
     margin: 10px;
     border-radius: 10%;
-    position: relative;
     
 }
 .icon img{
@@ -132,16 +131,6 @@ a:hover{
 .ufo--bottom-center{ top: 75vh; left: 40vw; transform: translateX(-50%); animation-delay: -10s; animation-duration: 22s; } */
 
 .ufo--middle{ top: 30vh; left: 40vw; transform: translateX(-50%); animation-delay: -8s; animation-duration: 19s; }
-/* Reposition middle UFO under headshot when nested inside .icon */
-.icon .ufo--middle{
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, 8px);
-}
-.icon .ufo--middle img{
-    width: clamp(80px, 14vw, 160px);
-}
 
 
 
