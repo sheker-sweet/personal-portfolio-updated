@@ -13,37 +13,50 @@
 <body>
     <div class="content">
         <p><a href="index.html">← Back</a></p>
-        <h1 class="page-title"><img class="heading-icon" src="images/3dicons-folder-fav-dynamic-color.webp" alt=""> Projects</h1>
-        <span class="stats stats--projects">
-            <div class="ufo-corner ufo-top-right"><img src="images/kirby-right-back-at-ya.webp" alt=""></div>
-            <div class="ufo-corner ufo-top-left"><img src="images/bulbasaur-pokemon (1).webp" alt=""></div>
-            <span class="color-green">> load projects</span>
+        <h1 class="page-title" data-typewriter aria-label="Projects"><img class="heading-icon" src="images/3dicons-folder-fav-dynamic-color.webp" alt=""> <span data-typewriter-text>Projects</span></h1>
+        <span class="stats stats--projects"><span class="color-green">> load projects</span>
 
-            <span class="heading color-magenta">Work Order Website</span> <span class="color-orange">(Dec 2024)</span>
-            <span class="indent">- Redesigned Wellesley's maintenance request platform</span>
-            <span class="indent">- Built user-centric interface with Bootstrap, HTML/CSS, JavaScript</span>
-            <span class="indent">- Improved accessibility and responsive design (mobile + desktop)</span>
-            <span class="indent">- Managed version control with GitHub</span>
-
-            <span class="heading color-magenta">G.O.S.L.E App</span> <span class="color-orange">(May–July 2024)</span>
-            <span class="indent">- Developed front-end web app for student engagement in clubs/events</span>
-            <span class="indent">- Implemented calendar, event discovery, feedback system, gamified features</span>
-            <span class="indent">- Led project execution and facilitated collaboration between students and organizers</span>
-
-            <span class="heading color-magenta">Tree Talk</span> <span class="color-orange">(Hackathon, Sept 2024)</span>
-            <span class="indent">- Created interactive website educating teens about deforestation</span>
-            <span class="indent">- Designed gamified elements and engaging visuals</span>
-            <span class="indent">- Led 24-hour development cycle, delivering a functional prototype</span>
-
-            <span class="heading color-magenta">My Very Own Website</span> <span class="color-orange">(Girls Who Code, July–Aug 2023)</span>
-            <span class="indent">- Built personal web project using HTML and CSS fundamentals</span>
-            <span class="indent">- Practiced front-end design and responsive layout</span>
+<a class="project-link heading color-magenta" href="#neurobolt">NeuroBOLT Pipeline</a> <span class="color-orange">(July 2026, Leipzig)</span>
+<span class="indent">- Adapted an EEG-to-fMRI transformer to the lab dataset and got training running end to end</span>
+<span class="indent">- Built a SLURM workflow that cut queue waits from 6+ hours to 3 and stopped half-finished runs</span>
+<span class="indent">- Added attention pooling to show which channels and frequency bands drive predictions</span>
+<a class="project-link heading color-magenta" href="#shivai">SHiVAI Pipeline</a> <span class="color-orange">(July 2026, Leipzig)</span>
+<span class="indent">- Deployed the SHiVAI pipeline on 10,000 MRI scans with Python and Bash scripts</span>
+<span class="indent">- Mapped BIDS and FreeSurfer outputs into SHiVAI’s input layout and cut SLURM waits from 6+ hours to 3</span>
+<span class="indent">- Fixed missing modalities, file-format mismatches, and job errors so large runs finished</span>
+<a class="project-link heading color-magenta" href="#fingerspelling">Fingerspelling Classifier</a> <span class="color-orange">(May 2026, Copenhagen)</span>
+<span class="indent">- Trained an ASL fingerspelling model with DenseNet201 on ~60,000 images across 34 classes</span>
+<span class="indent">- Found train/test image leakage behind a 98% score and retested on an independent dataset</span>
+<span class="indent">- Raised cross-dataset accuracy from 68% to 89% with more varied training images</span>
+        <a class="project-link heading color-magenta" href="#work-order-website">Work Order Website</a> <span class="color-orange">(Dec 2024)</span>
+<!-- TODO: paste Work Order Website URL into href below -->
+        <span class="indent">- </span>
+<span class="indent">- Built user-centric interface with Bootstrap, HTML/CSS, JavaScript</span>
+<span class="indent">- Improved accessibility and responsive design (mobile + desktop)</span>
+<span class="indent">- Managed version control with GitHub</span>
+<!-- TODO: paste Work Order Website URL into href below -->
+<a class="project-link heading color-magenta" href="#work-order-website">Work Order Website</a> <span class="color-orange">(Dec 2024)</span>
+<span class="indent">- Redesigned Wellesley's maintenance request platform</span>
+<span class="indent">- Built user-centric interface with Bootstrap, HTML/CSS, JavaScript</span>
+<span class="indent">- Improved accessibility and responsive design (mobile + desktop)</span>
+<span class="indent">- Managed version control with GitHub</span>
+<!-- TODO: paste G.O.S.L.E App URL into href below -->
+<a class="project-link heading color-magenta" href="#gosle-app">G.O.S.L.E App</a> <span class="color-orange">(May–July 2024)</span>
+<span class="indent">- Developed front-end web app for student engagement in clubs/events</span>
+<span class="indent">- Implemented calendar, event discovery, feedback system, gamified features</span>
+<span class="indent">- Led project execution and facilitated collaboration between students and organizers</span>
+<!-- TODO: paste Tree Talk URL into href below -->
+<a class="project-link heading color-magenta" href="#tree-talk">Tree Talk</a> <span class="color-orange">(Hackathon, Sept 2024)</span>
+<span class="indent">- Created interactive website educating teens about deforestation</span>
+<span class="indent">- Designed gamified elements and engaging visuals</span>
+<span class="indent">- Led 24-hour development cycle, delivering a functional prototype</span>
+<!-- TODO: paste My Very Own Website URL into href below -->
+<a class="project-link heading color-magenta" href="#my-very-own-website">My Very Own Website</a> <span class="color-orange">(Girls Who Code, July–Aug 2023)</span>
+<span class="indent">- Built personal web project using HTML and CSS fundamentals</span>
+<span class="indent">- Practiced front-end design and responsive layout</span>
         </span>
     </div>
-    
 
+    <script src="typewriter.js"></script>
 </body>
 </html>
-
-
-
